@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition: all .2s linear;
+   text-transform: capitalize;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+
+
+.col-center {
+	margin: 0 auto;
+	float: none !important;
+}
+.carousel-review {
+	margin: 50px auto;
+	padding: 0 70px;
+        width: 50%;
+}
+.carousel-item {
+	color: #999;
+	font-size: 14px;
+    text-align: center;
+	overflow: hidden;
+    min-height: 290px;
+}
+
+.carousel-item p{
+	font-size: 21px;
+}
+
+.carousel-item h5{
+	font-size: 1px;
+}
+
+.carousel .item .img-box {
+	width: 135px;
+	height: 135px;
+	margin: 0 auto;
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+}
+.carousel .img-box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+}
+.carousel .testimonial {
+	padding: 30px 0 10px;
+}
+.carousel .overview {	
+	font-style: italic;
+}
+.carousel .overview b {
+	text-transform: uppercase;
+	color: #db584e;
+}
+.carousel .carousel-control {
+	width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+	background: none;
+}
+.carousel-control i {
+    font-size: 68px;
+	line-height: 42px;
+    position: absolute;
+    display: inline-block;
+	color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+
+
+
+body{
+	background: rgb(250, 249, 249);
+ }
+ 
+ .container{
+	max-width: 1200px;
+	margin:0 auto;
+	padding:3rem 2rem;
+ }
+ 
+ .container .title{
+	font-size: 3.5rem;
+	color:rgb(192, 143, 143);
+	margin-bottom: 3rem;
+	text-transform: uppercase;
+	text-align: center;
+ }
+ 
+ 
+ .container .products-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap:2rem;
+ }
+ 
+ .container .products-container .product{
+	text-align: center;
+	padding:3rem 2rem;
+	background: rgb(173, 169, 169);
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+	outline: .1rem solid #ccc;
+	outline-offset: -1rem;
+	cursor: pointer;
+ }
+ 
+ .container .products-container .product:hover{
+	outline: .2rem solid #222;
+	outline-offset: 0;
+ }
+ 
+ .container .products-container .product img{
+	height: 25rem;
+ }
+ 
+ .container .products-container .product:hover img{
+	transform: scale(.9);
+ }
+ 
+ .container .products-container .product h3{
+	padding:.5rem 0;
+	font-size: 2rem;
+	color:#444;
+ }
+ 
+ .container .products-container .product:hover h3{
+	color:#27ae60;
+ }
+ 
+ .container .products-container .product .info{
+	font-size: 2rem;
+	color:#444;
+ }
+ 
+ .products-preview{
+	position: fixed;
+	top:0; left:0;
+	min-height: 100vh;
+	width: 100%;
+	background: rgba(0,0,0,.8);
+	display: none;
+	align-items: center;
+	justify-content: center;
+ }
+ 
+ .products-preview .preview{
+	display: none;
+	padding:2rem;
+	text-align: center;
+	background: #DADDFC;
+	position: relative;
+	margin:2rem;
+	width: 90rem;
+ }
+ 
+ .products-preview .preview.active{
+	display: inline-block;
+ }
+ 
+ .products-preview .preview img{
+	height: 30rem;
+ }
+ 
+ .products-preview .preview .fa-times{
+	position: absolute;
+	top:1rem; right:1.5rem;
+	cursor: pointer;
+	color:#444;
+	font-size: 4rem;
+ }
+ 
+ .products-preview .preview .fa-times:hover{
+	transform: rotate(90deg);
+ }
+ 
+ .products-preview .preview h3{
+	color:#444;
+	padding:.5rem 0;
+	font-size: 2.5rem;
+ }
+ 
+ .products-preview .preview .stars{
+	padding:1rem 0;
+	font-size: 1.7rem;
+ }
+ 
+ .products-preview .preview .stars i{
+	color:#27ae60;
+ }
+ 
+ .products-preview .preview .stars span{
+	color:#999;
+ }
+ 
+ .products-preview .preview p{
+	line-height: 1.5;
+	padding:1rem 0;
+	font-size: 1.6rem;
+	color:#777;
+ }
+ 
+ .products-preview .preview .info{
+	padding:1rem 0;
+	font-size: 2.5rem;
+	color:#27ae60;
+ }
+ 
+ .products-preview .preview .buttons{
+	display: flex;
+	gap:1.5rem;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+ }
+ 
+ .products-preview .preview .buttons a{
+	flex:1 1 16rem;
+	padding:1rem;
+	font-size: 1.8rem;
+	color:#444;
+	border:.1rem solid #444;
+ }
+ 
+ .products-preview .preview .buttons a.cart{
+	background: #444;
+	color:#fff;
+ }
+ 
+ .products-preview .preview .buttons a.cart:hover{
+	background: #111;
+ }
+ 
+ .products-preview .preview .buttons a.buy:hover{
+	background: #444;
+	color:#fff;
+ }
+ 
+ 
+ @media (max-width:991px){
+ 
+	html{
+	   font-size: 55%;
+	}
+ 
+ }
+ 
+ @media (max-width:768px){
+ 
+	.products-preview .preview img{
+	   height: 25rem;
+	}
+ 
+ }
+ 
+ @media (max-width:450px){
+ 
+	html{
+	   font-size: 50%;
+	}
+}
+
+
+.about-section{
+    background: url('https://images.unsplash.com/photo-1504150558240-0b4fd8946624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80') no-repeat left;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 150px;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 3px 1px 2px black;
+    color: #863737;
+}
+
+.text{
+    font-size: 16px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.thoughts{
+    display: flex;
+    justify-content: center;
+    /* font-weight: 1000; */
+    font-size: 25px;
+    font-style: italic;
+    opacity: 0.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.change_content:after{
+    content:"";
+    animation: changetext 10s infinite linear;
+    color: #000000;
+}
+
+@keyframes changetext{
+    0%{content: " “A journey of a thousand miles begins with a single step” – Lao Tzu";}
+    20%{content: "“Traveling – it leaves you speechless, then turns you into a storyteller” – Ibn Battuta";}
+    30%{content: "“The most beautiful thing in the world is, of course, the world itself” – Wallace Stevens";}
+    60%{content: "“Man cannot discover new oceans unless he has the courage to lose sight of the shore” – Andre Gide";}
+}
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+
+/* Bhavesh Start*/
+
+.form img{
+	
+	width: 20%;
+	height: 20%;
+	
+}
+
+
+
+img{
+    height: 60%;
+    
+}
+
+.form label{
+	font-family: 'Poppins', sans-serif;
+}
+
+.formcontainer{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.formcontainer:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("img/bg.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.imageside{
+    padding-left: 30px;
+    align-items: center;
+    display: flex;
+    
+	background: url("img/bg.jpg") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.form{
+	padding: 25px 40px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.form h2{
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+/* h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #2ecc71;
+} */
+
+.imageside:after{
+	content: '';
+	position: relative;
+	transform: translateY();
+	height: 400px;
+	width: 4px;
+	background-color: rgb(38, 67, 236);
+	left: 5%;
+	top: 0;
+}
+
+.fields{
+	font-family: 'Poppins', sans-serif;
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(235, 235, 235, 0.5);
+	padding: 0.5rem 1rem;
+	font-size: 1.0rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.fields:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form p{
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 10px 0px 10px 0px;
+}
+
+.form label{
+	text-align: center;
+}
+
+.btn{
+	font-family: 'Poppins', sans-serif;
+	width: 12%;
+	padding: 2rem 1rem;
+	background-color: #041562;
+	color: #fff;
+	font-size: 1.5rem;
+	border: none;
+	line-height: 0.5rem;
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+    background-color: #11468F;
+}
+
+.fields:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/responsive/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
